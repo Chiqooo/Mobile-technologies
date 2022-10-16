@@ -12,7 +12,7 @@ fun main(){
 class Fraction (val numerator:Int, val denumerator:Int){
     fun AddUp(other: Fraction):Fraction{
         var lcm: Int
-
+    //umciresi saerto jeradi
         lcm = if (denumerator > other.denumerator) denumerator else other.denumerator
         while (true) {
             if (lcm % denumerator == 0 && lcm % other.denumerator == 0) {
