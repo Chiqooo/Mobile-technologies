@@ -8,6 +8,7 @@ fun main(){
     println(f1.AddUp(f2))
 
 }
+
 class Fraction (val numerator:Int, val denumerator:Int){
     fun AddUp(other: Fraction):Fraction{
         var lcm: Int
@@ -20,10 +21,12 @@ class Fraction (val numerator:Int, val denumerator:Int){
             ++lcm
         }
         var newNumerator = ((lcm / denumerator) * numerator) + ((lcm / other.denumerator)) * other.numerator
-        return Fraction(newNumerator,lcm)
+        var addedupFraction = Fraction(newNumerator,lcm)
+        return addedupFraction.Reduction()
     }
     fun Multiply (other: Fraction): Fraction{
-        return Fraction (numerator * other.numerator, denumerator * other.denumerator)
+        var multipliedFraction = Fraction (numerator * other.numerator, denumerator * other.denumerator)
+        return multipliedFraction.Reduction()
     }
     fun Reduction (): Fraction{
         var i = 1
@@ -51,5 +54,3 @@ class Fraction (val numerator:Int, val denumerator:Int){
     }
 
 }
-
-
