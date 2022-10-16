@@ -32,7 +32,7 @@ class Point (var Axis: Int,  var Ordinate: Int){
     }
     fun Distance(other: Point): Double {
         var firsthalf: Int  = (other.Axis - Axis)
-        var otherhalf: Int = (other.Ordinate - Ordinate)
+        var otherhalf: Int = (other.Ordinate - Ordinate
         var sum = firsthalf.toDouble().pow(2) + otherhalf.toDouble().pow(2)
         return Math.sqrt(sum)
     }
